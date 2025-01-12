@@ -70,7 +70,14 @@
 			{
 				"name": "Check input file",
 				"type": "Validation",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Wait 10 seconds",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
@@ -79,6 +86,15 @@
 					},
 					"timeout": "0.12:00:00",
 					"sleep": 10
+				}
+			},
+			{
+				"name": "Wait 10 seconds",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 10
 				}
 			}
 		],
