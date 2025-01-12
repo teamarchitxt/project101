@@ -98,7 +98,7 @@
 						"type": "Validation",
 						"dependsOn": [
 							{
-								"activity": "Wait 10 seconds",
+								"activity": "Wait 15 seconds",
 								"dependencyConditions": [
 									"Succeeded"
 								]
@@ -116,12 +116,12 @@
 						}
 					},
 					{
-						"name": "Wait 10 seconds",
+						"name": "Wait 15 seconds",
 						"type": "Wait",
 						"dependsOn": [],
 						"userProperties": [],
 						"typeProperties": {
-							"waitTimeInSeconds": 10
+							"waitTimeInSeconds": 15
 						}
 					}
 				],
